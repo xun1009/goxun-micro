@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/spf13/viper"
-	"goxun-micro/core/config"
+	"github.com/xun1009/goxun-micro/core/config"
 )
 
 func main()  {
