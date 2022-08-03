@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 module github.com/xun1009/goxun-micro
-=======
-module xun1009/goxun-micro
->>>>>>> 52e3bfa (bugfix(gomod):gomod 路径错误)
 
 go 1.18
 
