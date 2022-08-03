@@ -1,0 +1,38 @@
+Name: articles.rpc
+ListenOn: 127.0.0.1:8091
+Etcd:
+  Hosts:
+    - 172.18.0.8:2379
+  Key: articles.rpc
+Mysql:
+  DataSource: root:1@tcp(172.18.0.7:3306)/go_zero_blog?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+Kafka:
+  Addr:
+    - localhost:9092
+  Topic:
+    - article
+  Consumer: group-1
+Es:
+  Addr: http://172.18.0.4:9200/
+  Logfile: ./eslog.log
+  Index: article
+
+CategoryRpc:
+  Etcd:
+    Hosts:
+      - 172.18.0.8:2379
+    Key: category.rpc
+
+TagsRpc:
+  Etcd:
+    Hosts:
+      - 172.18.0.8:2379
+    Key: tags.rpc
+
+Telemetry:
+  Endpoint: http://127.0.0.1:14268/api/traces
+
+Prometheus:
+  Host: 127.0.0.1
+  Port: 9090
+
